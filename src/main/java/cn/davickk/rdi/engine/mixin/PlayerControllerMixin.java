@@ -41,13 +41,17 @@ public class PlayerControllerMixin {
          */
         String clickTyping=clickType.toString();
 
+        //点击物品的对象
+        ItemStack clickedItemStack=info.getReturnValue();
+        int itemAmount=clickedItemStack.getCount();
+        if(itemAmount<1)
+            return;
         //光标指向方块坐标
         BlockPos lookingBlockPos=PlayerUtils.lookingAtBlock(playerEntity,false);
         //具体方块
         BlockState lookingBlockState=playerEntity.level.getBlockState(lookingBlockPos);
 
-        //点击物品的对象
-        ItemStack clickedItemStack=info.getReturnValue();
+
 
         //点击玩家名称
         String playerName=playerEntity.getDisplayName().getString();
@@ -65,7 +69,7 @@ public class PlayerControllerMixin {
         //点击的方块名称
         String blockName=lookingBlockState.getBlock().getRegistryName().toString();
         //方块坐标
-        int itemAmount=clickedItemStack.getCount();
+
         int posX=lookingBlockPos.getX();
         int posY=lookingBlockPos.getY();
         int posZ=lookingBlockPos.getZ();

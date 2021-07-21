@@ -5,7 +5,10 @@
   "refmap": "mixins.rdiengine.refmap.json",
   "mixins": [
     "PacketInflaterMixin",
-    "PlayerControllerMixin"
+    "PlayerControllerMixin",
+    "NoRedLoadingScreenMixin",
+    "EarlyLoaderGUIMixin",
+    "TitleScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1

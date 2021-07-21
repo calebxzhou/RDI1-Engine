@@ -1,19 +1,20 @@
 package cn.davickk.rdi.engine.mixin;
 
 import net.minecraft.client.gui.screen.MainMenuScreen;
-import net.minecraft.client.gui.screen.OptionsScreen;
 import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TranslationTextComponent;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
+import org.spongepowered.asm.mixin.injection.Constant;
+import org.spongepowered.asm.mixin.injection.ModifyConstant;
+@Mixin(MainMenuScreen.class)
 public class TitleScreenMixin extends Screen {
     protected TitleScreenMixin(ITextComponent p_i51108_1_) {
         super(p_i51108_1_);
+    }
+    @ModifyConstant(method = "render",constant =
+    @Constant(stringValue =                         "Copyright Mojang AB. Do not distribute!"))
+    private String changeright(String old) {
+        return "RDI Liberation Engine / Game by Mojang";
     }
     /*@Inject(method = "init", at = @At("HEAD"))
     private void onInit(CallbackInfo cbi){
