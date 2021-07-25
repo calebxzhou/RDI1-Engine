@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 public class CoreModLoad {
     void testJSLoading() {
         final CoreModEngine coreModEngine = new CoreModEngine();
-        coreModEngine.loadCoreMod(new JSFileLoader("js/no_red_screen.js"));
+        //coreModEngine.loadCoreMod(new JSFileLoader("js/no_red_screen.js"));
         final List<ITransformer<?>> iTransformers = coreModEngine.initializeCoreMods();
         iTransformers.forEach(t -> {
             System.out.printf("targ: %s\n", t.targets().stream().map(ITransformer.Target::getClassName).collect(Collectors.joining(",")));

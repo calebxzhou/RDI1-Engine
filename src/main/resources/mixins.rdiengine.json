@@ -3,12 +3,26 @@
   "package": "cn.davickk.rdi.engine.mixin",
   "compatibilityLevel": "JAVA_8",
   "refmap": "mixins.rdiengine.refmap.json",
-  "mixins": [
+  "client": [
+    "BrandingMixin",
+    "ClientHooksMixin",
+    "ClientLoginNetHandlerMixin",
+    "ClientPlayNetHandlerMixin",
+    "EarlyLoaderGUIMixin",
+    "ForgeHooksClientMixin",
+    "GameDataMixin",
+    "MainWindowMixin",
+    "MinecraftMixin",
     "PacketInflaterMixin",
     "PlayerControllerMixin",
-    "NoRedLoadingScreenMixin",
-    "EarlyLoaderGUIMixin",
-    "TitleScreenMixin"
+    "TitleScreenMixin",
+    "ResLoadProgressGuiMixin",
+    "WindowTitleMixin"
+  ],
+  "mixins": [
+    "FMLHandshakeHandlerMixin",
+    "VersionCheckerMixin",
+    "ServerLifecycleHooksMixin"
   ],
   "injectors": {
     "defaultRequire": 1

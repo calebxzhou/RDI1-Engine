@@ -1,0 +1,8 @@
+{
+"music.menu-af": { "sounds":[{"name": "rdiengine:menu-af", "stream": true}] },
+"music.menu-egl": { "sounds":[{"name": "rdiengine:menu-egl", "stream": true}] },
+"music.menu-libzg": { "sounds":[{"name": "rdiengine:menu-libzg", "stream": true}] },
+"music.menu-plzinsp": { "sounds":[{"name": "rdiengine:menu-plzinsp", "stream": true}] },
+"music.menu-rf": { "sounds":[{"name": "rdiengine:menu-rf", "stream": true}] },
+"music.menu-rush": { "sounds":[{"name": "rdiengine:menu-rush", "stream": true}] }
+}
